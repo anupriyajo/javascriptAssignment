@@ -1,6 +1,3 @@
-// sort
-// read from file
-// json form edit
 d3.json("./../dataFiles/json/stacked.json", function(data) {
  makeChart(data);
 });
@@ -9,7 +6,9 @@ function makeChart(data){
   {"Year": 1960,"Rural":20.0,"Urban":5.10},
   {"Year": 1961,"Rural":30.7,"Urban":10.8}
 ];*/
-
+//console.log(data+"\n");
+data.sort(function(a, b){ return d3.descending(a["Rural"]+a["Urban"], b["Rural"]+b["Urban"]); })
+//console.log(data);
 var xData = ["Rural", "Urban"];
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
