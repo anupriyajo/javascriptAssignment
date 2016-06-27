@@ -1,5 +1,5 @@
 function InitChart() {
- d3.json("./dataFiles/json/multiline.json", function(data) {
+ d3.json("./../dataFiles/json/multiline.json", function(data) {
   makeChart(data);
  });
 
